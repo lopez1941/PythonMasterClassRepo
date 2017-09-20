@@ -16,6 +16,8 @@ import pytz
 
 
 print("Please choose a timezone below to play TimeZone-Inator!")
+# poop, need to format to output in order or use a range/for loop
+
 
 us_zone_dict = {'1': ("US/Eastern", pytz.timezone('US/Eastern')),
                 '2': ("Japan", pytz.timezone('Japan')),
@@ -26,7 +28,8 @@ us_zone_dict = {'1': ("US/Eastern", pytz.timezone('US/Eastern')),
                 '7': ("Europe/Paris", pytz.timezone('Europe/Paris')),
                 '8': ("Europe/London", pytz.timezone('Europe/London')),
                 '9': ("Australia/Darwin", pytz.timezone('Australia/Darwin'))}
-
+for key in us_zone_dict:
+    print(key, us_zone_dict[key][0])
 user_choice = '1'
 print("Enter 0 to quit!")
 while user_choice != '0':
