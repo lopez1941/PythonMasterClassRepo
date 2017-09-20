@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="78c17598-cd97-4f41-85a7-965ba2a2ea13" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tkinterdemo.py" afterPath="$PROJECT_DIR$/tkinterdemo.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -239,6 +238,14 @@
       <option name="presentableId" value="Default" />
       <updated>1505924513781</updated>
     </task>
+    <task id="LOCAL-00001" summary="&quot;finished grid intro.&quot;">
+      <created>1505937349489</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1505937349489</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -275,6 +282,10 @@
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="&quot;finished grid intro.&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;finished grid intro.&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
