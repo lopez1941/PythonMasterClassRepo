@@ -13,6 +13,8 @@
 
 import datetime
 
+time_local = datetime.datetime.now()
+print("local time is {}".format(time_local.strftime('%x %X')))
 print(datetime.datetime.today())
 print(datetime.datetime.now())
 print(datetime.datetime.utcnow())

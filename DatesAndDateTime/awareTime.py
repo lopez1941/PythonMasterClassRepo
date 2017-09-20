@@ -1,12 +1,13 @@
 import datetime
 import pytz
 
-local_time = datetime.datetime.now()
+local_time = datetime.datetime.now()  #naive times
 utc_time = datetime.datetime.utcnow()
 
 print("Naive local time {}".format(local_time))
 print("Naive UTC {}".format(utc_time))
 
+# making the time aware of time zone info
 aware_local_time = pytz.utc.localize(utc_time).astimezone()
 aware_utc_time = pytz.utc.localize(utc_time)
 

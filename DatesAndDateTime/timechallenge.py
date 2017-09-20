@@ -14,10 +14,7 @@
 import datetime
 import pytz
 
-
 print("Please choose a timezone below to play TimeZone-Inator!")
-# poop, need to format to output in order or use a range/for loop
-
 
 us_zone_dict = {'1': ("US/Eastern", pytz.timezone('US/Eastern')),
                 '2': ("Japan", pytz.timezone('Japan')),
@@ -28,20 +25,28 @@ us_zone_dict = {'1': ("US/Eastern", pytz.timezone('US/Eastern')),
                 '7': ("Europe/Paris", pytz.timezone('Europe/Paris')),
                 '8': ("Europe/London", pytz.timezone('Europe/London')),
                 '9': ("Australia/Darwin", pytz.timezone('Australia/Darwin'))}
-for key in us_zone_dict:
+
+for key in sorted(us_zone_dict.keys()):
     print(key, us_zone_dict[key][0])
-user_choice = '1'
+
 print("Enter 0 to quit!")
+
+user_choice = '1'
+
 while user_choice != '0':
     user_choice = input("What is your choice? ")
     if user_choice in us_zone_dict.keys():
-        utc_time_now = datetime.datetime.now(tz=pytz.UTC)
-        local_time_aware = utc_time_now.astimezone(pytz.timezone('US/Eastern'))
         chosen_zone, py_zone_entry = us_zone_dict[user_choice]
+
+        utc_time_now = datetime.datetime.now(tz=pytz.UTC)
+        #local_time_aware = utc_time_now.astimezone(pytz.timezone('US/Eastern'))
+        local_time_aware = utc_time_now.astimezone(tz=None)
+        user_time_aware = utc_time_now.astimezone(py_zone_entry)
+
         print("The time in {0} is {1}" \
-              .format(chosen_zone, utc_time_now.astimezone(py_zone_entry)))
-        print("UTC time is {0}".format(utc_time_now))
-        print("Local time is {0}".format(local_time_aware))
+              .format(chosen_zone, user_time_aware.strftime('%x %X')))
+        print("UTC time is {0}".format(utc_time_now.strftime('%x %X')))
+        print("Local time is {0}".format(local_time_aware.strftime('%x %X')))
         print("=" * 50)
 
     elif user_choice == '0':
