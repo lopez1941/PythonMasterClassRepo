@@ -18,10 +18,14 @@ except ImportError:
 mainWindow = tkinter.Tk()
 
 mainWindow.title("Hello World")  # title text for the entire window
-mainWindow.geometry('640x480+8+400')  # size of window being opened, note that geometry takes a string not an int
+# mainWindow.geometry('640x480+8+200')  # size of window being opened, note that geometry takes a string not an int
+mainWindow.geometry('640x480-8-200')
+
 
 label = tkinter.Label(mainWindow, text="Hello World!")  # text inside the window
-label.pack(side='top')  # tells it to put the label text on the top portion
+# label.pack(side='top')  # tells it to put the label text on the top portion
+
+label.grid(row=0, column=0)  # using grid now instead of pack
 
 # this is creating a raised rectangle in the main window and orienting it to the left
 # canvas = tkinter.Canvas(mainWindow, relief='raised', borderwidth=1)  # passing mainWindow
@@ -35,13 +39,21 @@ label.pack(side='top')  # tells it to put the label text on the top portion
 
 # new frame to test
 leftFrame = tkinter.Frame(mainWindow)  # creates a new frame in the mainWindows
-leftFrame.pack(side='left', anchor='n', fill=tkinter.Y, expand=False)
+# leftFrame.pack(side='left', anchor='n', fill=tkinter.Y, expand=False)
+
+# as a grid this time
+leftFrame.grid(row=1, column=1)
 
 canvas = tkinter.Canvas(leftFrame, relief='raised', borderwidth=1)  # passing leftFrame
-canvas.pack(side='left', anchor='n')
+# canvas.pack(side='left', anchor='n')
+
+# again, using grid instead of pack
+canvas.grid(row=1, column=0)
 
 rightFrame = tkinter.Frame(mainWindow)
-rightFrame.pack(side='right', anchor='n', expand=True)
+# rightFrame.pack(side='right', anchor='n', expand=True)
+
+rightFrame.grid(row=1, column=2, sticky='n')
 
 #create some buttons
 # button1 = tkinter.Button(mainWindow, text="button1") # create a button, button1, in the mainWindow, with button1 as the text
@@ -68,9 +80,24 @@ button3 = tkinter.Button(rightFrame, text="button3")
 # button2.pack(side='top', anchor='s')
 # button3.pack(side='top', anchor='e')
 
-button1.pack(side='top')
-button2.pack(side='top')
-button3.pack(side='top')
+# button1.pack(side='top')
+# button2.pack(side='top')
+# button3.pack(side='top')
 
+button1.grid(row=0, column=0)
+button2.grid(row=1, column=0)
+button3.grid(row=2, column=0)
 
+# configure the columns- override and add weight to columns
+mainWindow.columnconfigure(0, weight=1)
+mainWindow.columnconfigure(1, weight=1)
+mainWindow.grid_columnconfigure(2, weight=1)
+
+leftFrame.config(relief='sunken', borderwidth=1)
+rightFrame.config(relief='sunken', borderwidth=1)
+leftFrame.grid(sticky='ns')
+rightFrame.grid(sticky='new')
+
+rightFrame.columnconfigure(0, weight=1)
+button2.grid(sticky='ew')  # have to set weight for sticky to work
 mainWindow.mainloop()  # pass control to tkinter so it can take over and make the window
