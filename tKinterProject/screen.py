@@ -9,16 +9,21 @@ mainWindow = tkinter.Tk()
 mainWindow.title("Grid Demo")  # title text for the entire window
 # mainWindow.geometry('640x480+8+200')  # size of window being opened, note that geometry takes a string not an int
 mainWindow.geometry('640x480-8-200')
+mainWindow['padx'] = 8
 
 label = tkinter.Label(mainWindow, text='TKinter Grid Demo')
 label.grid(row=0, column=0, columnspan=3)  # put 'label' in row 0 column 0, but span it across 3 columns
 
 # making a 5x5 grid inside our 'mainWindow'
-mainWindow.columnconfigure(0, weight=1)  # actually creating the columns
+# column size is based on the size of the widget.  the weight property really comes into play when a window is resized.
+# a weight of 3 will resize 3 times faster than 1
+# when placing widgets in the same cell, give the row or column a low weighting
+# give titles low weight so that when resizing vertically it doesn't look goofy
+mainWindow.columnconfigure(0, weight=100)  # actually creating the columns
 mainWindow.columnconfigure(1, weight=1)
-mainWindow.columnconfigure(2, weight=3)
-mainWindow.columnconfigure(3, weight=3)
-mainWindow.columnconfigure(4, weight=3)
+mainWindow.columnconfigure(2, weight=1000)
+mainWindow.columnconfigure(3, weight=600)
+mainWindow.columnconfigure(4, weight=1000)
 
 mainWindow.rowconfigure(0, weight=1)  # creating and putting meat on the bones of the rows
 mainWindow.rowconfigure(1, weight=10)
@@ -30,9 +35,15 @@ fileList = tkinter.Listbox(mainWindow)
 fileList.grid(row=1, column=0, sticky='nsew', rowspan=2)
 fileList.config(border=2, relief='sunken')
 
-for zone in os.listdir('/usr/bin'):  # for windows it would be /Windows/System32 instead of /usr/bin
+# i put this in to fix it so i could run on windows or linux/mac filesystems
+try:
+    for zone in os.listdir('/Windows/System32'):
+# for zone in os.listdir('/usr/bin'):  # for windows it would be /Windows/System32 instead of /usr/bin
     # insert commands in /usr/bin into our fileList
-    fileList.insert(tkinter.END, zone)  # END places each item at the end of the list
+        fileList.insert(tkinter.END, zone)  # END places each item at the end of the list
+except FileNotFoundError:
+    for zone in os.listdir('/usr/bin'):
+        fileList.insert(tkinter.END, zone)
 # command
 listScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=fileList.yview)  # create a scroll bar
 listScroll.grid(row=1, column=1, sticky='nsw', rowspan=2)  # adding to the grid
@@ -93,6 +104,11 @@ daySpin.grid(row=1, column=0)
 monthSpin.grid(row=1, column=1)
 yearSpin.grid(row=1, column=2)
 
+# ok and cancel buttons
+okButton = tkinter.Button(mainWindow, text="Ok")
+cancelButton = tkinter.Button(mainWindow, text="Cancel", command=mainWindow.destroy)  # remember no parenthesis after destroy, do not 'destroy()' just do destroy
+okButton.grid(row=4, column=3, sticky='e')
+cancelButton.grid(row=4, column=4, sticky='w')
 
 
 
