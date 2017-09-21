@@ -29,14 +29,12 @@ button_Text = {1: ['C', 'CE'],
                5: ['0', '=', '/']}
 
 for key in button_Text:
-    print(key)
     col = 0
     for click in button_Text[key]:
         if click == '=':
             tkinter.Button(calcWindow, text=click).grid(row=key, column=col, columnspan=2, sticky='nsew')
             col +=2
             continue
-        print(click)
         tkinter.Button(calcWindow, text=click).grid(row=key, column=col, sticky='nsew')
         col += 1
 
