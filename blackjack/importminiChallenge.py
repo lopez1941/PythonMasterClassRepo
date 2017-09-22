@@ -1,3 +1,10 @@
+# so your challenge here ow is to change the blackjack module to include a function called play that's a responsible
+# ultimately for allowing or running the code that starts the game so you want to test that the play function can be
+# used to start the game when the module is imported so again change the blackjack module itself to include a function
+# play and that function should be responsible for actually running the code that starts the game then test the play
+# function can be used to start the game when the module is imported that your way of knowing that things are working
+# as they should so go away and city and see if you can figure that out and when you ready to come back ou can come
+# back and check our solutions so pause the video now....
 # ok so moving on now the challenge and its going to be quite a simple one the challenges is to add a new button to
 # the program with the text new game now the button should call a function that clears the cards from the screen it
 # resets the players and dealers hands and then starts a new game now the easiest way to clear the contents of a frame
@@ -34,7 +41,7 @@ def load_images(card_images):
         card_images.append((10, image))
 
 
-def deal_card(frame):
+def _deal_card(frame):
     # pop card off top of deck
     next_card = deck.pop(0)
     # add that card to the bottom of the deck
@@ -65,7 +72,7 @@ def deal_dealer():
     dealer_score = score_hand(dealer_hand)
 
     while 0 < dealer_score < 17:
-        dealer_hand.append(deal_card(dealer_card_frame))
+        dealer_hand.append(_deal_card(dealer_card_frame))
         dealer_score = score_hand(dealer_hand)
         dealer_score_label.set(dealer_score)
 
@@ -82,7 +89,7 @@ def deal_dealer():
 
 
 def deal_player():
-    player_hand.append(deal_card(player_card_frame))
+    player_hand.append(_deal_card(player_card_frame))
     player_score = score_hand(player_hand)
     player_score_label.set(player_score)
     if player_score > 21:
@@ -121,17 +128,25 @@ def new_game():
 
     create_card_frames()
     result_text.set("")
+    initial_deal()
 
+
+def initial_deal():
     init_hands()
     deal_player()
-    dealer_hand.append(deal_card(dealer_card_frame))
+    dealer_hand.append(_deal_card(dealer_card_frame))
     dealer_score_label.set(score_hand(dealer_hand))
     deal_player()
+
 
 def shuffle_cards():
     global deck
     random.shuffle(deck)
 
+
+def play():
+    initial_deal()
+    mainWindow.mainloop()
 
 
 mainWindow = tkinter.Tk()
@@ -197,11 +212,6 @@ shuffle_cards()
 player_hand = []
 dealer_hand = []
 
-deal_player()
-dealer_hand.append(deal_card(dealer_card_frame))
-dealer_score_label.set(score_hand(dealer_hand))
-deal_player()
-
-
-mainWindow.mainloop()
+if __name__ == "__main__":
+    play()
 

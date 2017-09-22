@@ -132,8 +132,6 @@ def shuffle_cards():
     global deck
     random.shuffle(deck)
 
-
-
 mainWindow = tkinter.Tk()
 
 # set up the screen and frames for the dealer and player
