@@ -20,3 +20,25 @@
 # If you are using Windows you will probably find that the
 # width is already constrained and can't be resized too small.
 # The height will still need to be constrained, though.
+
+import os
+import tkinter
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+calcWindow.mainloop()

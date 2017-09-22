@@ -35,10 +35,15 @@ fileList = tkinter.Listbox(mainWindow)
 fileList.grid(row=1, column=0, sticky='nsew', rowspan=2)
 fileList.config(border=2, relief='sunken')
 
-for zone in os.listdir('/Windows/System32'):
+# i put this in to fix it so i could run on windows or linux/mac filesystems
+try:
+    for zone in os.listdir('/Windows/System32'):
 # for zone in os.listdir('/usr/bin'):  # for windows it would be /Windows/System32 instead of /usr/bin
     # insert commands in /usr/bin into our fileList
-    fileList.insert(tkinter.END, zone)  # END places each item at the end of the list
+        fileList.insert(tkinter.END, zone)  # END places each item at the end of the list
+except FileNotFoundError:
+    for zone in os.listdir('/usr/bin'):
+        fileList.insert(tkinter.END, zone)
 # command
 listScroll = tkinter.Scrollbar(mainWindow, orient=tkinter.VERTICAL, command=fileList.yview)  # create a scroll bar
 listScroll.grid(row=1, column=1, sticky='nsw', rowspan=2)  # adding to the grid
