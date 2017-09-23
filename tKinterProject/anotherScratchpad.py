@@ -1,4 +1,3 @@
-
 import os
 import tkinter
 
@@ -7,14 +6,13 @@ calcWindow = tkinter.Tk()
 calcWindow.title("Calculator")
 
 # sizing the tk window
-calcWindow.geometry('220x300+50+100')
+calcWindow.geometry('250x350+50+100')
 calcWindow['padx'] = 12
 calcWindow['pady'] = 8
 
 # config the columns, i think it's 5, but we'll see
 for i in range(0, 6):
     calcWindow.columnconfigure(i, weight=1000)
-
 
 # config the rows, i think it's 7, but we'll see
 for i in range(0, 7):
@@ -24,17 +22,12 @@ for i in range(0, 7):
 outputWindow = tkinter.Entry(calcWindow)
 outputWindow.grid(row=0, column=0, columnspan=5, sticky='nsew')
 
-#  let's make a button frame
-# buttonFrame = tkinter.Frame(calcWindow)
-# buttonFrame.grid(row=1, column=0, sticky='nsew')
-
 # make some buttons
 buttons = []  # going to store the buttons in a list
 button_Text = ['C', 'CE', '7', '8', '9', '+', '4', '5', '6', '-', '1', '2', '3', '*', '0', '=', '/']
 for item in button_Text:
     item = tkinter.Button(calcWindow, text=item)
     buttons.append(item)
-
 
 # row 1 C and CE
 i = button_Text.index('C')
@@ -73,6 +66,6 @@ for x in range(0, 3):
         buttons[i].grid(row=5, column=x, sticky='nsew')
         i += 1
 
-
+calcWindow.minsize(250,350)
 
 calcWindow.mainloop()

@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="78c17598-cd97-4f41-85a7-965ba2a2ea13" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/anotherScratchpad.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challengeScratchpad.py" afterPath="$PROJECT_DIR$/challengeScratchpad.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/anotherScratchpad.py" afterPath="$PROJECT_DIR$/anotherScratchpad.py" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/challenge.py" afterPath="$PROJECT_DIR$/challenge.py" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -40,14 +39,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="challenge.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="challenge.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/challenge.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding>
-                <element signature="e#913#922#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="144">
+              <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -55,8 +52,8 @@
       <file leaf-file-name="challengeScratchpad.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/challengeScratchpad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="54" column="20" lean-forward="true" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="55" />
               <folding>
                 <element signature="e#913#922#0" expanded="true" />
               </folding>
@@ -64,13 +61,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="anotherScratchpad.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="anotherScratchpad.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/anotherScratchpad.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="28" column="30" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="28" selection-end-column="50" />
+            <state relative-caret-position="154">
+              <caret line="11" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="21" />
               <folding>
-                <element signature="e#1#10#0" expanded="true" />
+                <element signature="e#0#9#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,9 +108,9 @@
       <list>
         <option value="$PROJECT_DIR$/tkinterdemo.py" />
         <option value="$PROJECT_DIR$/screen.py" />
-        <option value="$PROJECT_DIR$/challenge.py" />
         <option value="$PROJECT_DIR$/challengeScratchpad.py" />
         <option value="$PROJECT_DIR$/anotherScratchpad.py" />
+        <option value="$PROJECT_DIR$/challenge.py" />
       </list>
     </option>
   </component>
@@ -362,8 +359,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Python.anotherScratchpad" />
-        <item index="1" class="java.lang.String" itemvalue="Python.challengeScratchpad" />
-        <item index="2" class="java.lang.String" itemvalue="Python.challenge" />
+        <item index="1" class="java.lang.String" itemvalue="Python.challenge" />
+        <item index="2" class="java.lang.String" itemvalue="Python.challengeScratchpad" />
         <item index="3" class="java.lang.String" itemvalue="Python.screen" />
         <item index="4" class="java.lang.String" itemvalue="Python.tkinterdemo" />
       </list>
@@ -404,7 +401,14 @@
       <option name="project" value="LOCAL" />
       <updated>1506107817420</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="&quot;basic gui done.  have to work on min size and other optional parts&quot;">
+      <created>1506130663276</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1506130663276</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -447,7 +451,8 @@
     <MESSAGE value="&quot;finished grid intro.&quot; about to head to the house, saving so i can continue there." />
     <MESSAGE value="before the challenge" />
     <MESSAGE value="taking a break during the challenge" />
-    <option name="LAST_COMMIT_MESSAGE" value="taking a break during the challenge" />
+    <MESSAGE value="&quot;basic gui done.  have to work on min size and other optional parts&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="&quot;basic gui done.  have to work on min size and other optional parts&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -474,9 +479,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="378">
           <caret line="21" column="43" lean-forward="true" selection-start-line="21" selection-start-column="43" selection-end-line="21" selection-end-column="43" />
-          <folding>
-            <element signature="e#913#922#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -537,16 +540,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/challenge.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="30" column="0" lean-forward="false" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding>
-            <element signature="e#913#922#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/screen.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1170">
@@ -555,23 +548,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/anotherScratchpad.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="70" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#9#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/challengeScratchpad.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="54" column="20" lean-forward="true" selection-start-line="54" selection-start-column="20" selection-end-line="54" selection-end-column="20" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="21" selection-end-column="55" />
           <folding>
             <element signature="e#913#922#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/anotherScratchpad.py">
+    <entry file="file://$PROJECT_DIR$/challenge.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="28" column="30" lean-forward="true" selection-start-line="27" selection-start-column="2" selection-end-line="28" selection-end-column="50" />
-          <folding>
-            <element signature="e#1#10#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="144">
+          <caret line="14" column="48" lean-forward="true" selection-start-line="14" selection-start-column="48" selection-end-line="14" selection-end-column="48" />
+          <folding />
         </state>
       </provider>
     </entry>
