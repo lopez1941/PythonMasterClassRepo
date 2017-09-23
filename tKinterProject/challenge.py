@@ -30,7 +30,7 @@ calcWindow.title("Calculator")
 # sizing the tk window
 calcWindow.geometry('250x350+50+100')
 calcWindow['padx'] = 12
-calcWindow['pady'] = 8
+#calcWindow['pady'] = 8
 
 # config the columns, i think it's 5, but we'll see
 for i in range(0, 6):
