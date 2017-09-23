@@ -47,9 +47,9 @@ keyPad = tkinter.Frame(mainWindow)
 keyPad.grid(row=1, column=0, sticky='nsew')
 
 row = 0
-for keyRow in keys:
+for keyRow in keys:  # 5 rows of keys
     col = 0
-    for key in keyRow:
+    for key in keyRow:  # each key in the row
         tkinter.Button(keyPad, text=key[0]).grid(row=row, column=col, columnspan=key[1], sticky=tkinter.E + tkinter.W)
         col += key[1]
     row += 1
