@@ -50,13 +50,7 @@ buttonFrame = tkinter.Frame(calcWindow)
 buttonFrame.grid(row=1, column=0, sticky='nw')
 
 # make some buttons
-# buttons = []
-# button_Text = ['C', 'CE', '+', '=', '/', '*', '-', '1', '2', '3', '4', '5', '6', '7', '8', '9', '0']
-# for item in button_Text:
-#     item = tkinter.Button(buttonFrame, text=item)
-#     buttons.append(item)
-
-buttons = []
+buttons = []  # going to store the buttons in a list
 button_Text = ['C', 'CE', '7', '8', '9', '+', '4', '5', '6', '-', '1', '2', '3', '*', '0', '=', '/']
 for item in button_Text:
     item = tkinter.Button(buttonFrame, text=item)
@@ -84,7 +78,7 @@ for i in range(0, 4):
 # add row four to button frame
 x = button_Text.index('1')
 for i in range(0, 4):
-    buttons[x].grid(row=4, column=i, sticky='ew')
+    buttons[x].grid(row=4, column=i, sticky='new')
     x += 1
 
 # add row five to button frame
@@ -94,7 +88,7 @@ for i in range(0, 3):
         x += 1
         continue
     else:
-        buttons[x].grid(row=5, column=i, sticky='ew')
+        buttons[x].grid(row=5, column=i, sticky='new')
         x += 1
 buttons[15].grid(row=5, column=1, columnspan=2, sticky='new')
 
