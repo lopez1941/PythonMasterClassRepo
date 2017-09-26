@@ -36,6 +36,16 @@ def deal_card(frame):
     return next_card
 
 
+def score_hand(hand):
+    # calculate score, only one ace can be 11, goes to 1 if the hand busts
+    score = 0
+    ace = false
+    for next_card in hand:
+        card_value = next_card[0]
+        if card_value == 1 and not ace:
+
+
+
 def deal_dealer():
     deal_card(dealer_card_frame)
 
