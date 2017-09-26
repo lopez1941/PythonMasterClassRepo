@@ -39,12 +39,17 @@ def deal_card(frame):
 def score_hand(hand):
     # calculate score, only one ace can be 11, goes to 1 if the hand busts
     score = 0
-    ace = false
+    ace = False
     for next_card in hand:
         card_value = next_card[0]
         if card_value == 1 and not ace:
-
-
+            ace = True
+            card_value = 11
+        score += card_value
+        if score > 21 and ace:
+            score -= 10
+            ace = False
+    return score
 
 def deal_dealer():
     deal_card(dealer_card_frame)
@@ -54,21 +59,26 @@ def deal_player():
     # python will be happy with you using a global variable in a function until you try to change its value
     # then it will complain.  as soon as you try to change the variable, python creates a local variable that shadows
     # the global variable name. avoid it when possible.
-    global player_score  # tells python to use the global and not a local variable
-    global player_ace
-    card_value = deal_card(player_card_frame)[0]
-    if card_value ==1 and not player_ace:
-        player_ace = True
-        card_value = 11
-    player_score += card_value
-    # if we bust, check if there is an ace and subtract 10
-    if player_score > 21 and player_ace:
-        player_score -= 10
-        player_ace = False
+    # global player_score  # tells python to use the global and not a local variable
+    # global player_ace
+    # card_value = deal_card(player_card_frame)[0]
+    # if card_value ==1 and not player_ace:
+    #     player_ace = True
+    #     card_value = 11
+    # player_score += card_value
+    # # if we bust, check if there is an ace and subtract 10
+    # if player_score > 21 and player_ace:
+    #     player_score -= 10
+    #     player_ace = False
+    # player_score_label.set(player_score)
+    # if player_score > 21:
+    #     result_text.set("Dealer wins!")
+    # print(locals())
+    player_hand.append(deal_card(player_card_frame))
+    player_score = score_hand(player_hand)
     player_score_label.set(player_score)
     if player_score > 21:
-        result_text.set("Dealer wins!")
-    print(locals())
+        result_text.set("Dealer Wins!")
 
 
 mainWindow = tkinter.Tk()
@@ -94,8 +104,7 @@ dealer_card_frame = tkinter.Frame(card_frame, background="green")
 dealer_card_frame.grid(row=0, column=1, sticky="ew", rowspan=2)
 
 player_score_label = tkinter.IntVar()
-player_score = 0
-player_ace = False
+
 tkinter.Label(card_frame, text="Player", background="green", fg="white").grid(row=2, column=0)
 tkinter.Label(card_frame, textvariable=player_score_label, background="green", fg="white").grid(row=3, column=0)
 
