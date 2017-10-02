@@ -39,26 +39,6 @@ Aerosmith	Aerosmith	1973	Mama Kin
 Aerosmith	Aerosmith	1973	Write Me
 Aerosmith	Aerosmith	1973	Movin' Out
 Aerosmith	Aerosmith	1973	Walkin' The Dog
-AC DC	If You Want Blood, You've Got It	1978	Riff Raff
-AC DC	If You Want Blood, You've Got It	1978	Hell Ain't a Bad Place To Be
-AC DC	If You Want Blood, You've Got It	1978	Bad Boy Boogie
-AC DC	If You Want Blood, You've Got It	1978	The Jack
-AC DC	If You Want Blood, You've Got It	1978	Problem Child
-AC DC	If You Want Blood, You've Got It	1978	Whole Lotta Rosie
-AC DC	If You Want Blood, You've Got It	1978	Rock 'N' Roll Damnation
-AC DC	If You Want Blood, You've Got It	1978	High Voltage
-AC DC	If You Want Blood, You've Got It	1978	Let There Be Rock
-AC DC	If You Want Blood, You've Got It	1978	Rocker
-AC DC	For Those About To Rock (We Salute You)	1981	For Those About To Rock (We Salute You)
-AC DC	For Those About To Rock (We Salute You)	1981	I Put The Finger On You
-AC DC	For Those About To Rock (We Salute You)	1981	Let's Get It Up
-AC DC	For Those About To Rock (We Salute You)	1981	Inject The Venom
-AC DC	For Those About To Rock (We Salute You)	1981	Snowballed
-AC DC	For Those About To Rock (We Salute You)	1981	Evil Walks
-AC DC	For Those About To Rock (We Salute You)	1981	C.O.D.
-AC DC	For Those About To Rock (We Salute You)	1981	Breaking The Rules
-AC DC	For Those About To Rock (We Salute You)	1981	Night Of The Long Knives
-AC DC	For Those About To Rock (We Salute You)	1981	Spellbound
 Aerosmith	Get Your Wings	1974	Same Old Song And Dance
 Aerosmith	Get Your Wings	1974	Lord Of The Thighs
 Aerosmith	Get Your Wings	1974	Spaced
@@ -202,6 +182,26 @@ Aerosmith	Just Push Play	2001	Drop Dead Gorgeous
 Aerosmith	Just Push Play	2001	Light Inside
 Aerosmith	Just Push Play	2001	Avant Garden
 Aerosmith	Just Push Play	2001	Face
+AC DC	If You Want Blood, You've Got It	1978	Riff Raff
+AC DC	If You Want Blood, You've Got It	1978	Hell Ain't a Bad Place To Be
+AC DC	If You Want Blood, You've Got It	1978	Bad Boy Boogie
+AC DC	If You Want Blood, You've Got It	1978	The Jack
+AC DC	If You Want Blood, You've Got It	1978	Problem Child
+AC DC	If You Want Blood, You've Got It	1978	Whole Lotta Rosie
+AC DC	If You Want Blood, You've Got It	1978	Rock 'N' Roll Damnation
+AC DC	If You Want Blood, You've Got It	1978	High Voltage
+AC DC	If You Want Blood, You've Got It	1978	Let There Be Rock
+AC DC	If You Want Blood, You've Got It	1978	Rocker
+AC DC	For Those About To Rock (We Salute You)	1981	For Those About To Rock (We Salute You)
+AC DC	For Those About To Rock (We Salute You)	1981	I Put The Finger On You
+AC DC	For Those About To Rock (We Salute You)	1981	Let's Get It Up
+AC DC	For Those About To Rock (We Salute You)	1981	Inject The Venom
+AC DC	For Those About To Rock (We Salute You)	1981	Snowballed
+AC DC	For Those About To Rock (We Salute You)	1981	Evil Walks
+AC DC	For Those About To Rock (We Salute You)	1981	C.O.D.
+AC DC	For Those About To Rock (We Salute You)	1981	Breaking The Rules
+AC DC	For Those About To Rock (We Salute You)	1981	Night Of The Long Knives
+AC DC	For Those About To Rock (We Salute You)	1981	Spellbound
 Alice Cooper	Welcome To My Nightmare	1975	Welcome To My Nightmare
 Alice Cooper	Welcome To My Nightmare	1975	Devil's Food
 Alice Cooper	Welcome To My Nightmare	1975	The Black Widow
