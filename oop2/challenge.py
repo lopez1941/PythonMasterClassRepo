@@ -13,7 +13,7 @@ class Song:
         """Song init method
         Args:
             title (str): initializes the title attribute
-            artist (Artist): an artist object representing the song's creator
+            artist (str): the song's creator
             duration (optional(int)): initial value for the duration attribute
                 will default to zero if not specified.
         """

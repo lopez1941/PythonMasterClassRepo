@@ -6,6 +6,7 @@ class Player(object):
         self._level = 1
         self._score = 0
 
+# the '_' indicates not to call the methods directly.
     def _get_lives(self):
         return self._lives
 
@@ -19,14 +20,13 @@ class Player(object):
     def _get_level(self):
         return self._level
 
-    def _set_level(self, level):
-        if level >= 1:
-            difference = level - self._level
-            self._score += difference * 1000
-            self._level = level
+    def _set_level(self, levels):
+        if levels >= 1:
+            level_diff = levels - self._level
+            self._score += level_diff * 1000
+            self._level = levels
         else:
-            print("Level can't be less than one!")
-            self._level = 1
+            print("I'm sorry, level has to be 1 or greater!")
 
     lives = property(_get_lives, _set_lives)
 
