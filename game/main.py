@@ -1,29 +1,36 @@
-from player import Player
 
-tim = Player("Tim")
+from enemy import Troll, Vampire
 
-print(tim.name)
-print(tim.lives)
-tim.lives -= 1
-print(tim.lives)
+ugly_troll = Troll("Pug")
+print("Ugly troll - {}".format(ugly_troll))
 
-tim.lives -= 1
-print(tim)
+another_troll = Troll("Ug")
+print("Another troll - {}".format(another_troll))
 
-tim.lives -= 1
-print(tim)
+brother = Troll("Urg")
+print(brother)
 
-tim.lives -= 1
-print(tim)
+ugly_troll.grunt()
+another_troll.grunt()
+brother.grunt()
 
-tim.level = 2
-print(tim)
+# will fail
+# monster = Enemy("Basic enemy")
+# monster.grunt()
+ugly_troll.take_damage(12)
 
-tim.level += 5
-print(tim)
+marty = Vampire("Marty")
+marty.take_damage(10)
+print(marty)
 
-tim.level -= 2
-print(tim)
+print("-" * 40)
+ugly_troll.take_damage(30)
+print(ugly_troll)
 
-tim.score = 500
-print(tim)
+# while marty.alive:
+#     marty.take_damage(1)
+#     print(marty)
+
+marty._lives = 0
+marty._hit_points = 1
+print(marty)
