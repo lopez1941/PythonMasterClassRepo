@@ -1,5 +1,5 @@
 
-from enemy import Troll, Vampire
+from enemy import Enemy, Troll, Vampire, VampireKing
 
 ugly_troll = Troll("Pug")
 print("Ugly troll - {}".format(ugly_troll))
@@ -34,3 +34,13 @@ print(ugly_troll)
 marty._lives = 0
 marty._hit_points = 1
 print(marty)
+
+phil = VampireKing("Phil")
+print(phil)
+phil.take_damage(100)
+print(phil)
+
+while phil._alive:
+    phil.take_damage(100)
+
+
