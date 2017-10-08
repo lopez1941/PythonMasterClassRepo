@@ -25,6 +25,7 @@ class DocType(Tag):
 
 
 class Head(Tag):
+    """Accepts an arg for a doc title."""
     def __init__(self, title):
         doc_title = Title(title)
         super().__init__('head', doc_title)
@@ -52,8 +53,12 @@ class Title(Tag):
 
 
 class HtmlDoc(object):
+    """
+    Optional to pass a title for the doc as an arg. that will be passed to the head class instantiation.
+    Defaults to 'Welcome' if none specified
+       """
 
-    def __init__(self, title):
+    def __init__(self, title='Welcome'):
         self._doc_type = DocType()
         self._head = Head(title)
         self._body = Body()
@@ -70,7 +75,7 @@ class HtmlDoc(object):
 
 
 if __name__ == '__main__':
-    my_page = HtmlDoc('This is my page, suckas!')
+    my_page = HtmlDoc('this is my heading, dude!')
     my_page.add_tag('h1', 'Main Heading')
     my_page.add_tag('h2', 'sub-heading')
     my_page.add_tag('p', 'this is a paragraph that will appear on the page')
