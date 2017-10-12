@@ -20,4 +20,4 @@ cursor.close()
 
 db.close()
 
-# reason we get the results we got is that we never commited the changes we made in contacts2.py
+# reason we get the results we got is that we never committed the changes we made in contacts2.py
