@@ -38,6 +38,16 @@ class Penguin(object):
     def quack(self):
         print("Are you havin' a laugh? I'm a penguin!")
 
+class Flock(object):
+    def __init__(self):
+        self.flock = []
+
+    def add_duck(self, duck):
+        self.flock.append(duck)
+
+    def migrate(self):
+        for duck in self.flock:
+            duck.fly()
 
 # def test_duck(duck):
 #     duck.walk()
