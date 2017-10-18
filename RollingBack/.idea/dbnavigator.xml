@@ -25,7 +25,7 @@
     <show-object-properties value="true" />
     <loaded-nodes>
       <connection connection-id="663b85e9-94cf-48e0-a7cc-4622f4cbe61f">
-        <schema name="main" object-types="column, table, view" />
+        <schema name="main" object-types="column, constraint, index, table, dataset trigger, view" />
       </connection>
     </loaded-nodes>
   </component>
@@ -41,7 +41,7 @@ COMMIT;]]></console>
         <condition column="account" operator="=" value="" active="true" />
       </filter>
     </filter-list>
-    <filter-list connection-id="663b85e9-94cf-48e0-a7cc-4622f4cbe61f" dataset="main.accounts" active-filter-id="">
+    <filter-list connection-id="663b85e9-94cf-48e0-a7cc-4622f4cbe61f" dataset="main.accounts" active-filter-id="EMPTY_FILTER">
       <filter id="f81ca2ca-3da2-4257-b1d7-1d5d5ae5a62b" name="Filter 1" temporary="false" custom-name="false" type="basic" join-type="AND">
         <condition column="name" operator="=" value="" active="true" />
       </filter>
@@ -112,7 +112,7 @@ COMMIT;]]></console>
           <charset value="UTF-8" />
           <ddl-file-binding value="true" />
           <database-logging value="false" />
-          <connect-automatically value="true" />
+          <connect-automatically value="false" />
           <restore-workspace value="true" />
           <restore-workspace-deep value="true" />
           <environment-type value="default" />
